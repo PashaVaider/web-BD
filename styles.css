@@ -1,0 +1,346 @@
+
+    /* Ваш пользовательский CSS */
+    /* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+.nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+.nav a:hover {
+    color: #2a911c; /* Изменяем цвет ссылки при наведении */
+}
+.nav-submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+}
+.nav-item:hover .nav-submenu {
+    display: block;
+}
+.nav-submenu a {
+    display: block;
+    margin-bottom: 5px;
+    color: black; /* Установим черный цвет текста для подменю */
+}
+.phone-number,
+.buttons-container,
+.right-items {
+    display: flex;
+    align-items: center;
+}
+.phone-number,
+.right-items {
+    margin-left: auto;
+}
+.phone-number {
+    margin-right: 20px;
+}
+.button, .green-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.button {
+    background-color: red;
+    color: white;
+    margin-right: 10px;
+}
+.green-button {
+    background-color: rgba(10, 173, 10, 0.85);
+    color: white;
+}
+.green-button.login {
+    background-color: white;
+    color: black;
+}
+.contact, .review {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+
+.right-items .contact:hover,
+.right-items .review:hover {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: green; /* Меняем цвет текста на зеленый */
+}
+.arrow img {
+    margin-left: 5px;
+}
+.context-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.contents ul {
+    list-style-type: none;
+}
+.contents li {
+    margin-bottom: 10px;
+}
+.context-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.context-title.special {
+    font-size: 3rem;
+    font-weight: normal;
+}
+.context-subtitle {
+    font-weight: 300;
+    margin-top: 20px;
+    font-size:2rem;
+}
+.context-text {
+    margin-bottom: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 250px;
+
+}
+.images img {
+    width: auto;
+    height: auto;
+
+}
+
+.content-section {
+    position: sticky;
+    top: 40px; /* Регулируйте значение в зависимости от вашего макета */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 999; /* Установите высокий z-index, чтобы элемент был поверх другого контента */
+
+}
+
+
+
+.content-section h3 {
+    margin-right: 90px;
+    margin-top: 55px;
+    font-size: 22px;
+}
+
+.content-section ol {
+    margin-top: 10px;
+}
+
+.content-section ol li {
+    margin-bottom: 12px;
+}
+
+.content-section ol a {
+    color: #2a911c;
+    text-decoration: none;
+}
+
+/* Добавим стили для блока, который будет перекрывать блок содержания */
+.covering-block {
+    position: relative;
+    z-index: 998; /* Установим нижний z-index, чем у блока содержания */
+    height: 60px; /* Высота равна высоте блока содержания, чтобы занять его место */
+}
+
+
+
+.hidden {
+    display: none;
+}
+.green-link {
+    color: green;
+    margin-right: 20px;
+}
+
+.green-link:hover {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+.results {
+    font-weight: bold;
+    font-size: 1.6rem;
+
+
+}
+.results ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.green-link {
+    color: black;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.green-link:hover {
+    text-decoration: none;
+}
+
+.green-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.green-link:hover::after {
+    transform: scaleX(1);
+    background-color: green;
+}
+
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Вы можете увеличить значение z-index, если шапка продолжает перекрывать содержимое */
+}
+main.container {
+    margin-top: 70px; /* Настройте значение в соответствии с высотой вашей шапки */
+}
+
+
+.wrap-schedule-price.checkup-wrap {
+    margin-top: -270px; /* Настройте значение в соответствии с высотой блока, который вы хотите поднять */
+}
+
+/* Примерный CSS для последующих блоков */
+/* Здесь предполагается, что вы хотите поднять все блоки на 100 пикселей */
+.wrap-schedule-price.checkup-wrap ~ * {
+    margin-top: 100px;
+}
+
+
+.doctors-title {
+    margin-top: 60px;
+    font-weight: bold;
+    margin-bottom: -70px; /* Уменьшаем отступ снизу заголовка */
+}
+
+.card-container {
+    display: flex;
+    margin-top: 100px; /* Устанавливаем отступ сверху для контейнера карточек */
+}
+
+.column {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    margin-bottom: 10px;
+    width: 220px;
+    height: 65px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+    border-top: 1px solid #ccc; /* добавляем серую линию сверху */
+    margin-top: 80px;
+}
+
+.footer-column {
+    float: left;
+    margin-right: 30px;
+    padding: 0 10px; /* уменьшаем отступы внутри колонок */
+}
+.footer-column a {
+    display: block;
+    color: #555;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.copyright {
+    clear: both;
+    margin-right: 10px;
+    margin-top: 20px;
+    color: #555;
+    text-align: left; /* выравниваем текст копирайта по правому краю */
+}
+
+.copyright a {
+    color: #555;
+    text-decoration: underline;
+    margin-left: 20px; /* добавляем отступ между копирайтом и ссылкой */
+}
+
+.footer-right {
+    float: right;
+    right: 20px;
+    bottom: 20px;
+    margin-top: -180px;
+    margin-right: 90px;
+}
+
+.footer-right a {
+    display: inline-block;
+    margin-right: 20px; /* Добавляем отступ между картинками */
+    margin-bottom: 10px; /* Добавляем отступ между строками картинок */
+}
+
+.otstup{
+    margin-top: 40px;
+}
+
+#analysis,
+#research,
+#hygiene,
+#consultations {
+    font-size: 18px;
+}
+
+
